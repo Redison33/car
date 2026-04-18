@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Бибики</title>
+    <link rel="stylesheet" href="./src/style/reset.css" />
+    <link rel="stylesheet" href="./src/libs/nouislider.min.css" />
+    <link rel="stylesheet" href="./src/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./src/style/general/style-general.css" />
+    <link rel="stylesheet" href="./src/style/index/style-index.css" />
+    <script src="./src/libs/nouislider.min.js"></script>
+    <script defer src="./src/libs/swiper-bundle.min.js"></script>
+    <script defer src="./src/script/main.js"></script>
+    <script defer src="./src/script/index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo" href="">
+          <img src="" alt="" />
+        </a>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list list">
+            <li class="list__item"><a class="button link--active" href="index.html">Каталог</a></li>
+            <li class="list__item"><a class="button" href="client.html">Клиенты</a></li>
+            <li class="list__item"><a class="button" href="admin.html">Админ Панель</a></li>
+          </ul>
+        </nav>
+
+        <a href="" class="header__profile">
+          <img src="./src/assets/images/profile.svg" alt="" />
+
+          <p>Говно Говнарь Говнович</p>
+        </a>
+
+        <a href="" class="button button-white header__logout">
+          <img src="./src/assets/images/logout.svg" alt="" />
+          Выйти
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <aside class="filter">
+        <div class="filter__container">
+          <div class="filter__wrap">
+            <h3>Какой-то фильтр с чекбоксами</h3>
+
+            <label class="checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Крутой
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Гигакрутой
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Да
+            </label>
+          </div>
+
+          <div class="filter__wrap">
+            <h3>Какой-то фильтр с селектом</h3>
+
+            <select class="input-filter" name="" id="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <div class="filter__wrap">
+            <h3>Какой-то фильтр с ползунком</h3>
+
+            <div class="range">
+              <div class="range__wrap">
+                <input
+                  type="number"
+                  class="input-filter min-price-square"
+                  min="0"
+                  max="560"
+                  id="range-input-1"
+                />
+                -
+                <input
+                  type="number"
+                  class="input-filter max-price-square"
+                  min="0"
+                  max="560"
+                  id="range-input-2"
+                />
+              </div>
+
+              <div class="range__slider" id="rangeSlider"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="catalog">
+        <div class="catalog__container">
+          <div class="catalog__filter">
+            <input class="input-filter" type="text" placeholder="Поиск" />
+
+            <select class="input-filter" name="" id="">
+              <option data-filter-value="" value="">Порядок: по умолчанию</option>
+              <option data-filter-value="price:asc" value="price:asc">Цена: по возрастанию</option>
+              <option data-filter-value="price:desc" value="price:desc">Цена: по убыванию</option>
+              <option data-filter-value="title:asc" value="title:asc">Название: А—Я</option>
+              <option data-filter-value="title:desc" value="title:desc">Название: Я—А</option>
+              <option data-filter-value="created:desc" value="created:desc">
+                Порядок: сперва новые
+              </option>
+              <option data-filter-value="created:asc" value="created:asc">
+                Порядок: сперва старые
+              </option>
+            </select>
+
+            <button class="button button-primary">Найти</button>
+          </div>
+
+          <div class="catalog__content">
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1-meme.jpeg" alt="" />
+                <img src="./src/assets/images/catalog-card2-meme.jpeg" alt="" />
+                <img src="./src/assets/images/catalog-card3-meme.jpeg" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">2 880 000 Р</p>
+
+              <h3 class="card__name">Хатсон Хорнет I Ресталинг</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+
+            <a href="detail.html" class="catalog__card card">
+              <div class="card__slider">
+                <!-- MAX 4 -->
+                <img src="./src/assets/images/catalog-card1.webp" alt="" />
+                <img src="./src/assets/images/catalog-card2.webp" alt="" />
+                <img src="./src/assets/images/catalog-card3.webp" alt="" />
+                <img src="./src/assets/images/catalog-card4.webp" alt="" />
+
+                <div class="card__dots"></div>
+              </div>
+
+              <p class="card__price">1 488 000 Р</p>
+
+              <h3 class="card__name">Кчау S200</h3>
+
+              <p class="card__info">
+                <span>2018</span>
+                /
+                <span>33 000 км</span>
+              </p>
+            </a>
+          </div>
+
+          <div class="catalog__nav">
+            <div class="pagination">
+              <a class="prev button button-pagination">
+                <img src="./src/assets/images/arrow-left.svg" alt="" />
+              </a>
+
+              <div class="pagination__pages">
+                <!-- Тут логика любая, как хочешь, но не выводи все... Если идей нет спроси, я тебе напишу вариант -->
+                <a class="button button-pagination button-pagination--active">1</a>
+                <a class="button button-pagination">2</a>
+                <a class="button button-pagination">3</a>
+                <p>...</p>
+                <a class="button button-pagination">98</a>
+                <a class="button button-pagination">99</a>
+                <a class="button button-pagination">100</a>
+              </div>
+
+              <a class="next button button-pagination">
+                <img src="./src/assets/images/arrow-right.svg" alt="" />
+              </a>
+            </div>
+
+            <div class="catalog__size">
+              <select name="" id="">
+                <option value="10">10</option>
+                <option value="10">25</option>
+                <option value="10">50</option>
+                <option value="10">100</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <aside class="overlay"></aside>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Regular"), local("Manrope Regular"), url("../../assets/fonts/Manrope-Thin.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Light"), local("Manrope Light"), url("../../assets/fonts/Manrope-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Regular"), local("Manrope Regular"), url("../../assets/fonts/Manrope-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Medium"), local("Manrope Medium"), url("../../assets/fonts/Manrope-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Semibold"), local("Manrope Semibold"), url("../../assets/fonts/Manrope-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Bold"), local("Manrope Bold"), url("../../assets/fonts/Manrope-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-ExtraBold"), local("Manrope ExtraBold"), url("../../assets/fonts/Manrope-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+.filter {
+  min-width: 330px;
+  max-width: 330px;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  height: 100%;
+}
+.filter .filter__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 20px;
+}
+.filter .filter__container .filter__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d6d6d6;
+}
+.filter .filter__container .filter__wrap h3 {
+  font-size: 18px;
+  line-height: 100%;
+  color: #1d1d1d;
+  font-weight: 600;
+}
+.filter .filter__container .filter__wrap .input-filter {
+  background-color: #ffffff;
+}
+.filter .filter__container .filter__wrap .range__wrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.filter .filter__container .filter__wrap .range__wrap input {
+  width: 100%;
+}
+.filter .filter__container .filter__wrap .range .noUi-target {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #ffffff;
+}
+.filter .filter__container .filter__wrap .range .noUi-horizontal {
+  height: 2px;
+}
+.filter .filter__container .filter__wrap .range .noUi-connects {
+  cursor: pointer;
+}
+.filter .filter__container .filter__wrap .range .noUi-connect {
+  background-color: #1e63f3;
+}
+.filter .filter__container .filter__wrap .range .noUi-horizontal .noUi-handle {
+  right: -8px;
+  top: -7px;
+  width: 16px;
+  height: 16px;
+}
+.filter .filter__container .filter__wrap .range .noUi-handle {
+  border: none;
+  border-radius: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.filter .filter__container .filter__wrap .range .noUi-handle:focus {
+  outline: none;
+}
+.filter .filter__container .filter__wrap .range .noUi-handle:after,
+.filter .filter__container .filter__wrap .range .noUi-handle:before {
+  display: none;
+}
+.filter .filter__container .filter__wrap .range .noUi-touch-area::before,
+.filter .filter__container .filter__wrap .range .noUi-touch-area::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.filter .filter__container .filter__wrap .range .noUi-touch-area {
+  background-color: #ffffff;
+  border: 2px solid #999999;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.catalog {
+  width: 100%;
+}
+.catalog__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+.catalog__container .catalog__filter {
+  display: flex;
+  gap: 12px;
+}
+.catalog__container .catalog__filter input {
+  width: 100%;
+}
+.catalog__container .catalog__content {
+  height: 100%;
+  padding-right: 10px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 308px;
+  gap: 20px;
+}
+.catalog__container .catalog__content .card__slider {
+  position: relative;
+  margin-bottom: 12px;
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.catalog__container .catalog__content .card__slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background-color: #f5f7fa;
+}
+.catalog__container .catalog__content .card__slider img.active {
+  opacity: 1;
+}
+.catalog__container .catalog__content .card__slider .card__dots {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.catalog__container .catalog__content .card__slider .card__dots span {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #e3edff;
+  transition: background-color 0.4s ease-in-out;
+}
+.catalog__container .catalog__content .card__slider .card__dots span.active {
+  background-color: #1e63f3;
+}
+.catalog__container .catalog__content .card__slider:hover .card__dots {
+  opacity: 1;
+}
+.catalog__container .catalog__content .card__price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #1d1d1d;
+  margin-bottom: 4px;
+}
+.catalog__container .catalog__content .card__name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #1d1d1d;
+  margin-bottom: 8px;
+  transition: color 0.3s ease-in-out;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.catalog__container .catalog__content .card__info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #666666;
+}
+.catalog__container .catalog__nav {
+  margin-top: auto;
+  position: relative;
+}
+.catalog__container .catalog__nav .catalog__size {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.catalog__container .catalog__nav .catalog__size select {
+  border-radius: 4px;
+  padding: 5px 10px;
+}/*# sourceMappingURL=style-index.css.map */

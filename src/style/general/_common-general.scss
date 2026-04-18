@@ -1,0 +1,223 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  font-family: 'Manrope';
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Manrope';
+  font-weight: 400;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include container;
+}
+
+button,
+.button {
+  @include base-button;
+}
+
+.button-primary {
+  @include button-primary;
+}
+
+.button-secondary {
+  @include button-secondary;
+}
+
+.button-destructive {
+  @include button-destructive;
+}
+
+.button-accept {
+  @include button-accept;
+}
+
+.button-white {
+  @include button-white;
+}
+
+.button-pagination {
+  @include button-pagination;
+}
+
+input,
+select {
+  @include input-base;
+}
+
+.input-filter {
+  @include input-filter;
+}
+
+.checkbox {
+  @include base-checkbox;
+}
+
+// h1 {
+//   @include h1;
+// }
+
+// h2 {
+//   @include h2;
+// }
+
+// h3 {
+//   @include h3;
+// }
+
+// h4 {
+//   @include h4;
+// }
+
+// h5 {
+//   @include h5;
+// }
+
+.header {
+  margin-top: $spacing-ml;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xl;
+    padding: $spacing-sm $spacing-ml;
+    background-color: $base-background;
+    border-radius: 10px;
+
+    .header__logo {
+      img {
+        width: 200px;
+        height: 49px;
+      }
+    }
+
+    .nav {
+      ul {
+        display: flex;
+        gap: $spacing-sm;
+
+        li {
+          a {
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 12px;
+              left: 12px;
+              right: 12px;
+              height: 2px;
+              background-color: $base-text-primary;
+              transform: scaleX(0);
+              transition: background-color 0.3s ease-in-out;
+            }
+
+            &:hover {
+              color: $controls-hover-focus;
+              &::after {
+                background-color: $controls-hover-focus;
+              }
+            }
+          }
+
+          .link--active {
+            &::after {
+              transform: scaleX(100%);
+            }
+          }
+        }
+      }
+    }
+
+    .header__profile {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      color: $base-text-primary;
+
+      img {
+        padding: $spacing-sm;
+        border-radius: 50%;
+        background-color: $base-surface;
+      }
+
+      p {
+        font-size: $fz-body-sm;
+        transition: color 0.3s ease-in-out;
+      }
+
+      &:hover {
+        color: $controls-hover-focus;
+      }
+    }
+
+    .header__logout {
+    }
+  }
+}
+
+main {
+  display: flex;
+  gap: $spacing-m;
+  margin: $spacing-ml 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: $spacing-xs;
+
+  .pagination__pages {
+    display: flex;
+    align-items: end;
+    gap: $spacing-xs;
+  }
+
+  .button-pagination--active {
+    background-color: $controls-primary !important;
+    color: $base-surface;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: $base-background;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $controls-primary;
+  border-radius: 5px;
+}

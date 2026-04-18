@@ -1,0 +1,388 @@
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Regular"), local("Manrope Regular"), url("../../assets/fonts/Manrope-Thin.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Light"), local("Manrope Light"), url("../../assets/fonts/Manrope-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Regular"), local("Manrope Regular"), url("../../assets/fonts/Manrope-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Medium"), local("Manrope Medium"), url("../../assets/fonts/Manrope-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Semibold"), local("Manrope Semibold"), url("../../assets/fonts/Manrope-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-Bold"), local("Manrope Bold"), url("../../assets/fonts/Manrope-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: local("Manrope-ExtraBold"), local("Manrope ExtraBold"), url("../../assets/fonts/Manrope-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  font-family: "Manrope";
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Manrope";
+  font-weight: 400;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+button,
+.button {
+  font-family: "Manrope";
+  display: flex;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #1d1d1d;
+  cursor: pointer;
+  text-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+@media (max-width: 1600px) {
+  button,
+  .button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+.button-primary {
+  background-color: #1e63f3;
+  color: #ffffff;
+  border: 1px solid #1e63f3;
+}
+.button-primary:hover {
+  background-color: #1554d0;
+  border-color: #1554d0;
+}
+.button-primary:active {
+  background-color: #0d3fa5;
+  border-color: #0d3fa5;
+}
+.button-primary[disabled=disabled], .button-primary:disabled {
+  background-color: #d6d6d6;
+  border-color: #d6d6d6;
+}
+
+.button-secondary {
+  background-color: #ffffff;
+  color: #1e63f3;
+  border: 1px solid #1e63f3;
+}
+.button-secondary:hover {
+  border-color: #1554d0;
+  background-color: #e3edff;
+}
+.button-secondary:active {
+  color: #0d3fa5;
+  border-color: #c9dcff;
+  background-color: #c9dcff;
+}
+.button-secondary[disabled=disabled], .button-secondary:disabled {
+  background-color: #d6d6d6;
+}
+
+.button-destructive {
+  background-color: #f44336;
+  color: #ffffff;
+  border: 1px solid #f44336;
+}
+.button-destructive:hover {
+  background-color: #d32f2f;
+  border-color: #d32f2f;
+}
+.button-destructive:active {
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+}
+.button-destructive[disabled=disabled], .button-destructive:disabled {
+  background-color: #fdd8d8;
+  border-color: #fdd8d8;
+}
+
+.button-accept {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: 1px solid #4caf50;
+}
+.button-accept:hover {
+  border-color: #43b146;
+  background-color: #43b146;
+}
+.button-accept:active {
+  color: #37943a;
+  background-color: #37943a;
+}
+.button-accept[disabled=disabled], .button-accept:disabled {
+  background-color: #d6d6d6;
+  border: #d6d6d6;
+}
+
+.button-white {
+  background-color: #ffffff;
+  color: #1e63f3;
+  border: 1px solid #ffffff;
+}
+.button-white:hover {
+  border-color: #e3edff;
+  background-color: #e3edff;
+}
+.button-white:active {
+  color: #0d3fa5;
+  border-color: #c9dcff;
+  background-color: #c9dcff;
+}
+.button-white[disabled=disabled], .button-white:disabled {
+  background-color: #d6d6d6;
+}
+
+.button-pagination {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.button-pagination:hover {
+  border-color: #e3edff;
+  background-color: #e3edff;
+}
+.button-pagination:active {
+  color: #0d3fa5;
+  border-color: #c9dcff;
+  background-color: #c9dcff;
+}
+.button-pagination[disabled=disabled], .button-pagination:disabled {
+  background-color: #d6d6d6;
+}
+
+input,
+select {
+  font-family: "Manrope";
+  padding: 10px 16px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  color: #1d1d1d;
+  font-size: 16px;
+  font-weight: 400;
+  resize: none;
+  outline: none;
+}
+input:focus,
+select:focus {
+  border-color: #1554d0;
+}
+
+.input-filter {
+  background-color: #f5f7fa;
+  border-color: #f5f7fa;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  height: 24px;
+  padding-left: 32px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 10px;
+  height: 15px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.checkbox input:checked ~ .checkmark {
+  background-color: #1e63f3;
+}
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.header {
+  margin-top: 20px;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 12px 20px;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+}
+.header__container .header__logo img {
+  width: 200px;
+  height: 49px;
+}
+.header__container .nav ul {
+  display: flex;
+  gap: 12px;
+}
+.header__container .nav ul li a {
+  position: relative;
+}
+.header__container .nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background-color: #1d1d1d;
+  transform: scaleX(0);
+  transition: background-color 0.3s ease-in-out;
+}
+.header__container .nav ul li a:hover {
+  color: #1554d0;
+}
+.header__container .nav ul li a:hover::after {
+  background-color: #1554d0;
+}
+.header__container .nav ul li .link--active::after {
+  transform: scaleX(100%);
+}
+.header__container .header__profile {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1d1d1d;
+}
+.header__container .header__profile img {
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.header__container .header__profile p {
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+}
+.header__container .header__profile:hover {
+  color: #1554d0;
+}
+main {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 4px;
+}
+.pagination .pagination__pages {
+  display: flex;
+  align-items: end;
+  gap: 4px;
+}
+.pagination .button-pagination--active {
+  background-color: #1e63f3 !important;
+  color: #ffffff;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f7fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e63f3;
+  border-radius: 5px;
+}/*# sourceMappingURL=style-general.css.map */
