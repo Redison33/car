@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Бибики</title>
+    <link rel="stylesheet" href="./src/style/reset.css" />
+    <link rel="stylesheet" href="./src/libs/nouislider.min.css" />
+    <link rel="stylesheet" href="./src/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./src/style/general/style-general.css" />
+    <link rel="stylesheet" href="./src/style/detail/style-detail.css" />
+    <script src="./src/libs/nouislider.min.js"></script>
+    <script defer src="./src/libs/swiper-bundle.min.js"></script>
+    <script defer src="./src/script/main.js"></script>
+    <script defer src="./src/script/detail.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo" href="">
+          <img src="" alt="" />
+        </a>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list list">
+            <li class="list__item"><a class="button link--active" href="index.html">Каталог</a></li>
+            <li class="list__item"><a class="button" href="client.html">Клиенты</a></li>
+            <li class="list__item"><a class="button" href="admin.html">Админ Панель</a></li>
+          </ul>
+        </nav>
+
+        <a href="" class="header__profile">
+          <img src="./src/assets/images/profile.svg" alt="" />
+
+          <p>Говно Говнарь Говнович</p>
+        </a>
+
+        <a href="" class="button button-white header__logout">
+          <img src="./src/assets/images/logout.svg" alt="" />
+          Выйти
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="detail">
+        <div class="detail__container">
+          <div class="detail__wrap detail__wrap-left">
+            <div class="detail__title">
+              <a class="button button-primary push-back" href="index.html">Назад</a>
+
+              <h1>Кчау S200</h1>
+
+              <p class="detail__price">1 488 000 P</p>
+            </div>
+
+            <ul class="detail__info">
+              <li>
+                Комплектация
+
+                <div></div>
+
+                <span>SS edition</span>
+              </li>
+
+              <li>
+                Двигатель
+
+                <div></div>
+
+                <span>2.0 л, 228 л.с., соляра</span>
+              </li>
+
+              <li>
+                Коробка
+
+                <div></div>
+
+                <span>Автомат</span>
+              </li>
+
+              <li>
+                Привод
+
+                <div></div>
+
+                <span>Полный</span>
+              </li>
+
+              <li>
+                Цвет
+
+                <div></div>
+
+                <span>Удобный</span>
+              </li>
+
+              <li>
+                Пробег
+
+                <div></div>
+
+                <span>33 000км</span>
+              </li>
+
+              <li>
+                Год выпуска
+
+                <div></div>
+
+                <span>2018</span>
+              </li>
+            </ul>
+
+            <div class="detail__buttons">
+              <button class="button-secondary">Договор на подбор 1</button>
+
+              <button class="button-secondary">Договор на подбор 2</button>
+            </div>
+          </div>
+
+          <div class="detail__wrap detail__wrap-right">
+            <div class="swiper detail__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    data-fancybox="gallery"
+                    src="./src/assets/images/catalog-card1.webp"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    data-fancybox="gallery"
+                    src="./src/assets/images/catalog-card2.webp"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    data-fancybox="gallery"
+                    src="./src/assets/images/catalog-card3.webp"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    data-fancybox="gallery"
+                    src="./src/assets/images/catalog-card4.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-button-next">
+                <svg width="7" height="15" viewBox="0 0 7 15" fill="none">
+                  <path d="M0.398438 0.302734L5.89844 7.52496L0.398438 14.3027" stroke="black" />
+                </svg>
+              </div>
+              <div class="swiper-button-prev">
+                <svg width="7" height="15" viewBox="0 0 7 15" fill="none">
+                  <path d="M6.13672 14.3154L0.636719 7.09321L6.13672 0.31543" stroke="black" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="swiper detail__gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    data-fancybox="gallery"
+                    src="./src/assets/images/catalog-card1.webp"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    data-fancybox="gallery"
+                    src="./src/assets/images/catalog-card2.webp"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    data-fancybox="gallery"
+                    src="./src/assets/images/catalog-card3.webp"
+                    alt=""
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    data-fancybox="gallery"
+                    src="./src/assets/images/catalog-card4.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <aside class="overlay"></aside>
+  </body>
+</html>

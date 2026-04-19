@@ -13,6 +13,17 @@ img {
   max-width: 100%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 body {
   min-width: 320px;
   font-family: 'Manrope';
@@ -66,26 +77,6 @@ select {
 .checkbox {
   @include base-checkbox;
 }
-
-// h1 {
-//   @include h1;
-// }
-
-// h2 {
-//   @include h2;
-// }
-
-// h3 {
-//   @include h3;
-// }
-
-// h4 {
-//   @include h4;
-// }
-
-// h5 {
-//   @include h5;
-// }
 
 .header {
   margin-top: $spacing-ml;
