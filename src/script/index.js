@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // var swiper = new Swiper('.swiper', {
-  //   slidesPerView: 'auto',
-  //   spaceBetween: 12,
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  // });
-
   const sliders = document.querySelectorAll('.card__slider');
 
   sliders.forEach((slider) => {
