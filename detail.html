@@ -113,9 +113,9 @@
             </ul>
 
             <div class="detail__buttons">
-              <button class="button-secondary">Договор на подбор 1</button>
+              <button class="button-secondary open-modal">Договор на подбор</button>
 
-              <button class="button-secondary">Договор на подбор 2</button>
+              <button class="button-secondary">Договор на отбор</button>
             </div>
           </div>
 
@@ -207,7 +207,38 @@
       </section>
     </main>
 
-    <footer></footer>
+    <aside class="modal">
+      <form action="" class="modal__container">
+        <h2>Договор на подбор</h2>
+
+        <div class="modal__content">
+          <div class="cars">
+            <div class="cars__card">
+              <img src="./src/assets/images/catalog-card1.webp" alt="" />
+
+              <h3>Кчау S200</h3>
+            </div>
+          </div>
+
+          <label for="user">
+            Выберите клиента
+
+            <select name="user" id="">
+              <option value="1">Гейский Гей Геевич</option>
+              <option value="2">Питонский Питон Питоневич</option>
+              <option value="3">Пыхарский Пыхарь Пыхаревич</option>
+              <option value="9999">Фронтов Гигачад Ебейший</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="modal__buttons">
+          <button class="button-secondary cancel">Отменить</button>
+
+          <button class="button-primary save">Создать договор</button>
+        </div>
+      </form>
+    </aside>
 
     <aside class="overlay"></aside>
   </body>

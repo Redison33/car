@@ -199,6 +199,40 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: $base-surface;
+  border-radius: 10px;
+
+  &__container {
+    padding: $spacing-xl;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-ml;
+
+    h2 {
+      font-size: $fz-h3;
+      font-weight: $weight-semibold;
+      text-align: center;
+    }
+
+    .modal__buttons {
+      display: flex;
+      gap: $spacing-s;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 5px;

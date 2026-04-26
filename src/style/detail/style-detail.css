@@ -45,27 +45,38 @@
   height: 100%;
 }
 .detail__container {
-  height: 100%;
-  background-color: #f5f7fa;
-  border-radius: 10px;
-  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   gap: 32px;
   overflow-y: auto;
 }
-.detail__container .detail__wrap {
-  height: 100%;
-}
 .detail__container .detail__wrap-right {
-  max-width: 1000px;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  padding: 20px;
 }
 .detail__container .detail__wrap-right .detail__slider {
-  height: calc(80% - 8px);
-  max-height: 700px;
+  height: 500px;
+  width: 600px;
   margin-bottom: 20px;
 }
+.detail__container .detail__wrap-right .detail__slider .swiper-button-prev,
+.detail__container .detail__wrap-right .detail__slider .swiper-button-next {
+  background-color: #f5f7fa;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.detail__container .detail__wrap-right .detail__slider .swiper-button-prev svg,
+.detail__container .detail__wrap-right .detail__slider .swiper-button-next svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+}
 .detail__container .detail__wrap-right .detail__gallery {
-  height: calc(20% - 8px);
+  width: 600px;
+  height: 150px;
   max-height: 180px;
 }
 .detail__container .detail__wrap-right .detail__gallery .swiper-slide {
@@ -146,4 +157,40 @@
   color: #1d1d1d;
   white-space: nowrap;
   font-weight: 600;
+}
+
+.modal {
+  width: 500px;
+}
+.modal__container .modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modal__container .modal__content .cars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.modal__container .modal__content .cars__card {
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #f5f7fa;
+  display: flex;
+  gap: 24px;
+}
+.modal__container .modal__content .cars__card img {
+  width: 150px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal__container .modal__content .cars__card h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.modal__container .modal__content label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }/*# sourceMappingURL=style-detail.css.map */

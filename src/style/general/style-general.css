@@ -397,6 +397,36 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.modal__container {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal__container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+.modal__container .modal__buttons {
+  display: flex;
+  gap: 8px;
+}
+.modal__container .modal__buttons button {
+  width: 100%;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 5px;
