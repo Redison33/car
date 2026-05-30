@@ -1,0 +1,97 @@
+.users-detail {
+  width: 100%;
+}
+.users-detail__container {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+}
+.users-detail__container .users-detail__profile {
+  width: 500px;
+  min-width: 500px;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.users-detail__container .users-detail__profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.users-detail__container .users-detail__profile-header h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.users-detail__container .users-detail__profile img {
+  border-radius: 20px;
+}
+.users-detail__container .users-detail__profile-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.users-detail__container .users-detail__profile-info ul li {
+  font-size: 18px;
+  font-weight: 600;
+}
+.users-detail__container .users-detail__profile-info ul li span {
+  font-weight: 400;
+}
+.users-detail__container .users-detail__profile-status {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.users-detail__container .users-detail__profile-status h3 {
+  font-size: 20px;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+.users-detail__container .users-detail__profile-status select {
+  width: 100%;
+  background-color: #ffffff;
+}
+.users-detail__container .users-detail__data {
+  width: 100%;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.users-detail__container .users-detail__data-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.users-detail__container .users-detail__data-header .tabs {
+  display: flex;
+  background-color: #ffffff;
+  padding: 4px;
+  border-radius: 8px;
+}
+.users-detail__container .users-detail__data-header .tabs .tab--active {
+  background-color: #ffffff;
+  color: #1e63f3;
+  border: 1px solid #1e63f3;
+}
+.users-detail__container .users-detail__data-header .tabs .tab--active:hover {
+  border-color: #1554d0;
+  background-color: #e3edff;
+}
+.users-detail__container .users-detail__data-header .tabs .tab--active:active {
+  color: #0d3fa5;
+  border-color: #c9dcff;
+  background-color: #c9dcff;
+}
+.users-detail__container .users-detail__data-header .tabs .tab--active[disabled=disabled], .users-detail__container .users-detail__data-header .tabs .tab--active:disabled {
+  background-color: #d6d6d6;
+}/*# sourceMappingURL=style-users-detail.css.map */

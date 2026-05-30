@@ -370,6 +370,107 @@ main {
   overflow: hidden;
 }
 
+.filter {
+  min-width: 330px;
+  max-width: 330px;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  height: 100%;
+}
+.filter .filter__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 10px;
+}
+.filter .filter__container .filter__content {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 20px;
+}
+.filter .filter__container .filter__content::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.filter .filter__container .filter__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d6d6d6;
+}
+.filter .filter__container .filter__wrap h3 {
+  font-size: 18px;
+  line-height: 100%;
+  color: #1d1d1d;
+  font-weight: 600;
+}
+.filter .filter__container .filter__wrap .input-filter {
+  background-color: #ffffff;
+}
+.filter .filter__container .filter__wrap .range__wrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.filter .filter__container .filter__wrap .range__wrap input {
+  width: 100%;
+}
+.filter .filter__container .filter__wrap .range .noUi-target {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #ffffff;
+}
+.filter .filter__container .filter__wrap .range .noUi-horizontal {
+  height: 2px;
+}
+.filter .filter__container .filter__wrap .range .noUi-connects {
+  cursor: pointer;
+}
+.filter .filter__container .filter__wrap .range .noUi-connect {
+  background-color: #1e63f3;
+}
+.filter .filter__container .filter__wrap .range .noUi-horizontal .noUi-handle {
+  right: -8px;
+  top: -7px;
+  width: 16px;
+  height: 16px;
+}
+.filter .filter__container .filter__wrap .range .noUi-handle {
+  border: none;
+  border-radius: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.filter .filter__container .filter__wrap .range .noUi-handle:focus {
+  outline: none;
+}
+.filter .filter__container .filter__wrap .range .noUi-handle:after,
+.filter .filter__container .filter__wrap .range .noUi-handle:before {
+  display: none;
+}
+.filter .filter__container .filter__wrap .range .noUi-touch-area::before,
+.filter .filter__container .filter__wrap .range .noUi-touch-area::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.filter .filter__container .filter__wrap .range .noUi-touch-area {
+  background-color: #ffffff;
+  border: 2px solid #999999;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+.filter .filter__container .search {
+  margin-top: auto;
+}
+
 .pagination {
   display: flex;
   justify-content: center;

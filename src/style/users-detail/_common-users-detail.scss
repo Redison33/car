@@ -1,0 +1,102 @@
+.users-detail {
+  width: 100%;
+  //   height: 100%;
+  //   overflow-y: auto;
+
+  &__container {
+    display: flex;
+    gap: $spacing-m;
+    height: 100%;
+
+    .users-detail__profile {
+      width: 500px;
+      min-width: 500px;
+      background-color: $base-background;
+      border-radius: 10px;
+      padding: $spacing-ml;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-ml;
+
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $spacing-ml;
+
+        h2 {
+          font-size: $fz-h4;
+          font-weight: $weight-medium;
+        }
+      }
+
+      img {
+        border-radius: 20px;
+      }
+
+      &-info {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-sm;
+
+          li {
+            font-size: $fz-body;
+            font-weight: $weight-semibold;
+
+            span {
+              font-weight: $weight-regular;
+            }
+          }
+        }
+      }
+
+      &-status {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $spacing-ml;
+
+        h3 {
+          font-size: $fz-h5;
+          font-weight: $weight-medium;
+          text-wrap: nowrap;
+        }
+
+        select {
+          width: 100%;
+          background-color: $base-surface;
+        }
+      }
+    }
+
+    .users-detail__data {
+      width: 100%;
+      background-color: $base-background;
+      border-radius: 10px;
+      padding: $spacing-ml;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-ml;
+
+      &-header {
+        display: flex;
+        gap: $spacing-ml;
+        align-items: center;
+        justify-content: space-between;
+
+        .tabs {
+          display: flex;
+          background-color: $base-surface;
+          padding: $spacing-xs;
+          border-radius: 8px;
+
+          .tab--active {
+            @include button-secondary;
+          }
+        }
+      }
+    }
+  }
+}

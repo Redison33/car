@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Бибики</title>
+    <link rel="stylesheet" href="./src/style/reset.css" />
+    <link rel="stylesheet" href="./src/libs/nouislider.min.css" />
+    <link rel="stylesheet" href="./src/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./src/style/general/style-general.css" />
+    <link rel="stylesheet" href="./src/style/users-detail/style-users-detail.css" />
+    <script src="./src/libs/nouislider.min.js"></script>
+    <script defer src="./src/libs/swiper-bundle.min.js"></script>
+    <script defer src="./src/script/main.js"></script>
+    <script defer src="./src/script/index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo" href="">
+          <img src="" alt="" />
+        </a>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list list">
+            <li class="list__item"><a class="button link--active" href="index.html">Каталог</a></li>
+            <li class="list__item"><a class="button" href="users.html">Клиенты</a></li>
+            <li class="list__item"><a class="button" href="admin.html">Админ Панель</a></li>
+          </ul>
+        </nav>
+
+        <a href="" class="header__profile">
+          <img src="./src/assets/images/profile.svg" alt="" />
+
+          <p>Говно Говнарь Говнович</p>
+        </a>
+
+        <a href="" class="button button-white header__logout">
+          <img src="./src/assets/images/logout.svg" alt="" />
+          Выйти
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="users-detail">
+        <div class="users-detail__container">
+          <div class="users-detail__profile">
+            <div class="users-detail__profile-header">
+              <h2>Говно Говнарь Говнович</h2>
+
+              <button class="button-primary">Изменить</button>
+            </div>
+
+            <img src="./src/assets/images/catalog-card1.jpg" alt="" />
+
+            <div class="users-detail__profile-info">
+              <ul>
+                <li>
+                  Дата создания:
+
+                  <span>01.01.1970</span>
+                </li>
+
+                <li>
+                  Телефон:
+
+                  <span>8-800-555-35-35</span>
+                </li>
+
+                <li>
+                  Паспортные данные:
+
+                  <span>1488 777777 УФМС по Гейской обласи</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="users-detail__profile-status">
+              <h3>Статус клиента</h3>
+
+              <select name="" id="" class="input-filter">
+                <option value="">Клиент создан</option>
+                <option value="">Клиент на помойке</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="users-detail__data">
+            <div class="users-detail__data-header">
+              <ul class="tabs">
+                <li>
+                  <a class="button button-white tab--active" href="">Запрос клиента</a>
+                </li>
+                <li>
+                  <a class="button button-white" href="">Комментарий</a>
+                </li>
+                <li>
+                  <a class="button button-white" href="">Изменения</a>
+                </li>
+              </ul>
+
+              <button class="button-primary">Добавить</button>
+            </div>
+
+            <div class="users-detail__data-content">
+              хз что тут выводить и как это должно выглядеть
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="overlay"></aside>
+  </body>
+</html>
