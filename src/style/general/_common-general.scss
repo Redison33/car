@@ -108,7 +108,7 @@ select {
             &::after {
               content: '';
               position: absolute;
-              bottom: 12px;
+              bottom: 10px;
               left: 12px;
               right: 12px;
               height: 2px;
@@ -285,6 +285,78 @@ main {
 
     .search {
       margin-top: auto;
+    }
+  }
+}
+
+.menu {
+  min-width: 330px;
+  max-width: 330px;
+  background-color: $base-background;
+  border-radius: 10px;
+  height: 100%;
+  padding: $spacing-l $spacing-ssm;
+
+  &__container {
+    overflow: auto;
+    height: 100%;
+
+    .nav {
+      &__list {
+        .item {
+          a {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            justify-content: start;
+
+            span {
+              transition: color 0.3s ease-in-out;
+            }
+
+            svg {
+              min-width: 20px;
+              transition: transform 0.3s ease-in-out;
+
+              path {
+                transition: fill 0.3s ease-in-out;
+              }
+            }
+
+            &:hover {
+              span {
+                color: $controls-hover-focus;
+              }
+
+              svg {
+                path {
+                  fill: $controls-hover-focus;
+                }
+              }
+            }
+          }
+
+          .nested {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+
+            &__menu {
+              padding-left: $spacing-m;
+
+              .nested__wrap {
+                .nested__list {
+                  .nested__link {
+                    &:hover {
+                      color: $controls-hover-focus;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

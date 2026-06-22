@@ -9,6 +9,15 @@
     gap: $spacing-m;
     height: 100%;
 
+    .users__filter {
+      display: flex;
+      gap: $spacing-sm;
+
+      input {
+        width: 100%;
+      }
+    }
+
     .table {
       // overflow: auto;
       display: flex;

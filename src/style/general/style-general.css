@@ -326,7 +326,7 @@ select:focus {
 .header__container .nav ul li a::after {
   content: "";
   position: absolute;
-  bottom: 12px;
+  bottom: 10px;
   left: 12px;
   right: 12px;
   height: 2px;
@@ -469,6 +469,52 @@ main {
 }
 .filter .filter__container .search {
   margin-top: auto;
+}
+
+.menu {
+  min-width: 330px;
+  max-width: 330px;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  height: 100%;
+  padding: 24px 10px;
+}
+.menu__container {
+  overflow: auto;
+  height: 100%;
+}
+.menu__container .nav__list .item a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: start;
+}
+.menu__container .nav__list .item a span {
+  transition: color 0.3s ease-in-out;
+}
+.menu__container .nav__list .item a svg {
+  min-width: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.menu__container .nav__list .item a svg path {
+  transition: fill 0.3s ease-in-out;
+}
+.menu__container .nav__list .item a:hover span {
+  color: #1554d0;
+}
+.menu__container .nav__list .item a:hover svg path {
+  fill: #1554d0;
+}
+.menu__container .nav__list .item .nested {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.menu__container .nav__list .item .nested__menu {
+  padding-left: 16px;
+}
+.menu__container .nav__list .item .nested__menu .nested__wrap .nested__list .nested__link:hover {
+  color: #1554d0;
 }
 
 .pagination {
