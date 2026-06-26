@@ -44,50 +44,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const rangeSlider = document.getElementById('rangeSlider');
-  const input1 = document.querySelector('.min-price-square');
-  const input2 = document.querySelector('.max-price-square');
-  const inputs = [input1, input2];
-
-  let startValue1 = Number(input1.getAttribute('min'));
-
-  if (input1.getAttribute('value') !== '') {
-    startValue1 = Number(input1.getAttribute('value'));
-  }
-
-  let startValue2 = Number(input2.getAttribute('max'));
-
-  if (input2.getAttribute('value') !== '') {
-    startValue2 = Number(input2.getAttribute('value'));
-  }
-
   if (rangeSlider) {
-    noUiSlider.create(rangeSlider, {
-      start: [startValue1, startValue2],
-      margin: 10,
-      connect: true,
-      step: 1,
-      range: {
-        min: [Number(input1.getAttribute('min'))],
-        max: [Number(input2.getAttribute('max'))],
-      },
+    const input1 = document.querySelector('.min-price-square');
+    const input2 = document.querySelector('.max-price-square');
+    const inputs = [input1, input2];
+
+    let startValue1 = Number(input1.getAttribute('min'));
+
+    if (input1.getAttribute('value') !== '') {
+      startValue1 = Number(input1.getAttribute('value'));
+    }
+
+    let startValue2 = Number(input2.getAttribute('max'));
+
+    if (input2.getAttribute('value') !== '') {
+      startValue2 = Number(input2.getAttribute('value'));
+    }
+
+    if (rangeSlider) {
+      noUiSlider.create(rangeSlider, {
+        start: [startValue1, startValue2],
+        margin: 10,
+        connect: true,
+        step: 1,
+        range: {
+          min: [Number(input1.getAttribute('min'))],
+          max: [Number(input2.getAttribute('max'))],
+        },
+      });
+    }
+
+    rangeSlider.noUiSlider.on('update', function (values, handle) {
+      inputs[handle].value = Math.round(values[handle]);
+
+      if (typeof smartFilter !== 'undefined' && smartFilter.keyup) {
+        smartFilter.keyup(inputs[handle]);
+      }
+    });
+
+    const setRangeSlider = (i, value) => {
+      let arr = [null, null];
+      arr[i] = value;
+      rangeSlider.noUiSlider.set(arr);
+    };
+
+    inputs.forEach((el, index) => {
+      el.addEventListener('change', (e) => {
+        setRangeSlider(index, e.currentTarget.value);
+      });
     });
   }
-
-  rangeSlider.noUiSlider.on('update', function (values, handle) {
-    inputs[handle].value = Math.round(values[handle]);
-
-    if (typeof smartFilter !== 'undefined' && smartFilter.keyup) {
-      smartFilter.keyup(inputs[handle]);
-    }
-  });
-  const setRangeSlider = (i, value) => {
-    let arr = [null, null];
-    arr[i] = value;
-    rangeSlider.noUiSlider.set(arr);
-  };
-  inputs.forEach((el, index) => {
-    el.addEventListener('change', (e) => {
-      setRangeSlider(index, e.currentTarget.value);
-    });
-  });
 });

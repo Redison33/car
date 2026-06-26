@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow-y: auto;
 }
 .users-detail__container .users-detail__profile-header {
   display: flex;
@@ -28,6 +29,9 @@
 }
 .users-detail__container .users-detail__profile img {
   border-radius: 20px;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .users-detail__container .users-detail__profile-info ul {
   display: flex;
@@ -94,4 +98,7 @@
 }
 .users-detail__container .users-detail__data-header .tabs .tab--active[disabled=disabled], .users-detail__container .users-detail__data-header .tabs .tab--active:disabled {
   background-color: #d6d6d6;
+}
+.users-detail__container .users-detail__data-content {
+  overflow-y: auto;
 }/*# sourceMappingURL=style-users-detail.css.map */
