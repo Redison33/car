@@ -66,6 +66,7 @@ button,
 }
 
 input,
+.input,
 select {
   @include input-base;
 }
@@ -76,6 +77,10 @@ select {
 
 .checkbox {
   @include base-checkbox;
+}
+
+.tooltip {
+  @include base-tooltip;
 }
 
 .header {
@@ -233,6 +238,7 @@ main {
           box-shadow: none;
           border-radius: 0;
           background-color: $base-surface;
+          padding: 0 $spacing-s;
         }
 
         .noUi-horizontal {
@@ -306,8 +312,9 @@ main {
         .item {
           a {
             display: flex;
-            align-items: center;
+            justify-content: space-between !important;
             gap: 7px;
+            text-wrap: wrap;
             justify-content: start;
 
             span {
@@ -340,17 +347,32 @@ main {
             height: 0;
             overflow: hidden;
             transition: height 0.3s ease-in-out;
+            position: relative;
 
             &__menu {
               padding-left: $spacing-m;
-
               .nested__wrap {
+                position: relative;
+                padding-left: $spacing-xs;
+
                 .nested__list {
                   .nested__link {
                     &:hover {
                       color: $controls-hover-focus;
                     }
                   }
+                }
+
+                &::before {
+                  content: '';
+                  width: 16px;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  bottom: 24px;
+                  border-left: 1px solid $base-text-primary;
+                  border-bottom: 1px solid $base-text-primary;
+                  border-radius: 0 0 0 10px;
                 }
               }
             }
@@ -399,7 +421,7 @@ main {
   transform: translate(-50%, -50%);
   width: 600px;
   background-color: $base-surface;
-  border-radius: 10px;
+  border-radius: 32px;
 
   &__container {
     padding: $spacing-xl;
@@ -410,7 +432,8 @@ main {
     h2 {
       font-size: $fz-h3;
       font-weight: $weight-semibold;
-      text-align: center;
+      line-height: 100%;
+      // text-align: center;
     }
 
     .modal__buttons {

@@ -226,6 +226,7 @@ button,
 }
 
 input,
+.input,
 select {
   font-family: "Manrope";
   padding: 10px 16px;
@@ -239,11 +240,13 @@ select {
   outline: none;
 }
 input:focus,
+.input:focus,
 select:focus {
   border-color: #1554d0;
 }
 @media (max-width: 1600px) {
   input,
+  .input,
   select {
     font-size: 14px;
     padding: 8px 12px;
@@ -299,6 +302,44 @@ select:focus {
 }
 .checkbox input:checked ~ .checkmark:after {
   display: block;
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  min-width: 20px;
+  height: 20px;
+}
+.tooltip img {
+  width: 20px;
+  height: 20px;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  padding: 2px 4px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3019607843));
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 20px solid transparent;
+  border-top: 20px solid #ffffff;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .header {
@@ -424,6 +465,7 @@ main {
   box-shadow: none;
   border-radius: 0;
   background-color: #ffffff;
+  padding: 0 8px;
 }
 .filter .filter__container .filter__wrap .range .noUi-horizontal {
   height: 2px;
@@ -485,8 +527,9 @@ main {
 }
 .menu__container .nav__list .item a {
   display: flex;
-  align-items: center;
+  justify-content: space-between !important;
   gap: 7px;
+  text-wrap: wrap;
   justify-content: start;
 }
 .menu__container .nav__list .item a span {
@@ -509,12 +552,28 @@ main {
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
+  position: relative;
 }
 .menu__container .nav__list .item .nested__menu {
   padding-left: 16px;
 }
+.menu__container .nav__list .item .nested__menu .nested__wrap {
+  position: relative;
+  padding-left: 4px;
+}
 .menu__container .nav__list .item .nested__menu .nested__wrap .nested__list .nested__link:hover {
   color: #1554d0;
+}
+.menu__container .nav__list .item .nested__menu .nested__wrap::before {
+  content: "";
+  width: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 24px;
+  border-left: 1px solid #1d1d1d;
+  border-bottom: 1px solid #1d1d1d;
+  border-radius: 0 0 0 10px;
 }
 
 .pagination {
@@ -553,7 +612,7 @@ main {
   transform: translate(-50%, -50%);
   width: 600px;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 32px;
 }
 .modal__container {
   padding: 32px;
@@ -564,7 +623,7 @@ main {
 .modal__container h2 {
   font-size: 32px;
   font-weight: 600;
-  text-align: center;
+  line-height: 100%;
 }
 .modal__container .modal__buttons {
   display: flex;

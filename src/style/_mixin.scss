@@ -265,3 +265,45 @@
     display: block;
   }
 }
+
+@mixin base-tooltip {
+  position: relative;
+  cursor: pointer;
+  min-width: 20px;
+  height: 20px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: $base-surface;
+    border: 1px solid $base-divider;
+    text-align: center;
+    padding: 2px 4px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3019607843));
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 20px solid transparent;
+      border-top: 20px solid $base-surface;
+    }
+  }
+
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+}

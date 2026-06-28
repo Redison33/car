@@ -12,7 +12,7 @@
     <script src="./src/libs/nouislider.min.js"></script>
     <script defer src="./src/libs/swiper-bundle.min.js"></script>
     <script defer src="./src/script/main.js"></script>
-    <script defer src="./src/script/index.js"></script>
+    <script defer src="./src/script/users-detail.js"></script>
   </head>
   <body>
     <header class="header">
@@ -49,7 +49,7 @@
             <div class="users-detail__profile-header">
               <h2>Говно Говнарь Говнович</h2>
 
-              <button class="button-primary">Изменить</button>
+              <button class="button-primary open-modal">Изменить</button>
             </div>
 
             <img src="./src/assets/images/catalog-card1.jpg" alt="" />
@@ -79,6 +79,11 @@
             <div class="users-detail__profile-status">
               <h3>Статус клиента</h3>
 
+              <div class="tooltip">
+                <img src="./src/assets/images/tooltip.svg" alt="" />
+                <span class="tooltiptext"> При выборе статуса смена произойдет автоматически </span>
+              </div>
+
               <select name="" id="" class="input-filter">
                 <option value="">Клиент создан</option>
                 <option value="">Клиент на помойке</option>
@@ -103,13 +108,156 @@
               <button class="button-primary">Добавить</button>
             </div>
 
+            <div class="users-detail__data-create">
+              <textarea placeholder="Завист от таба" type="text" class="input"></textarea>
+
+              <button class="button button-secondary">Создать</button>
+            </div>
+
             <div class="users-detail__data-content">
-              хз что тут выводить и как это должно выглядеть
+              <div class="card">
+                <!-- Что надо пихай, чисто для иконочки -->
+                <img src="" alt="" />
+
+                <div class="card__content">
+                  <h3 class="card__title">Табик</h3>
+
+                  <p class="card__text">
+                    текстик текстик текстик текстик текстиктекстик текстик текстик текстик текстик
+                    текстик текстик текстик текстик текстик текстик
+                  </p>
+
+                  <p class="card__text-secondary">Дополнительный текстик, но менее важный</p>
+
+                  <p class="card__text-ost">Еще один доп текстик, так, по преколу</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <!-- Что надо пихай, чисто для иконочки -->
+                <img src="" alt="" />
+
+                <div class="card__content">
+                  <h3 class="card__title">Табик</h3>
+
+                  <p class="card__text">
+                    текстик текстик текстик текстик текстиктекстик текстик текстик текстик текстик
+                    текстик текстик текстик текстик текстик текстик
+                  </p>
+
+                  <p class="card__text-secondary">Дополнительный текстик, но менее важный</p>
+
+                  <p class="card__text-ost">Еще один доп текстик, так, по преколу</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <!-- Что надо пихай, чисто для иконочки -->
+                <img src="" alt="" />
+
+                <div class="card__content">
+                  <h3 class="card__title">Табик</h3>
+
+                  <p class="card__text">
+                    текстик текстик текстик текстик текстиктекстик текстик текстик текстик текстик
+                    текстик текстик текстик текстик текстик текстик
+                  </p>
+
+                  <p class="card__text-secondary">Дополнительный текстик, но менее важный</p>
+
+                  <p class="card__text-ost">Еще один доп текстик, так, по преколу</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <!-- Что надо пихай, чисто для иконочки -->
+                <img src="" alt="" />
+
+                <div class="card__content">
+                  <h3 class="card__title">Табик</h3>
+
+                  <p class="card__text">
+                    текстик текстик текстик текстик текстиктекстик текстик текстик текстик текстик
+                    текстик текстик текстик текстик текстик текстик
+                  </p>
+
+                  <p class="card__text-secondary">Дополнительный текстик, но менее важный</p>
+
+                  <p class="card__text-ost">Еще один доп текстик, так, по преколу</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <!-- Что надо пихай, чисто для иконочки -->
+                <img src="" alt="" />
+
+                <div class="card__content">
+                  <h3 class="card__title">Табик</h3>
+
+                  <p class="card__text">
+                    текстик текстик текстик текстик текстиктекстик текстик текстик текстик текстик
+                    текстик текстик текстик текстик текстик текстик
+                  </p>
+
+                  <p class="card__text-secondary">Дополнительный текстик, но менее важный</p>
+
+                  <p class="card__text-ost">Еще один доп текстик, так, по преколу</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <!-- Что надо пихай, чисто для иконочки -->
+                <img src="" alt="" />
+
+                <div class="card__content">
+                  <h3 class="card__title">Табик</h3>
+
+                  <p class="card__text">
+                    текстик текстик текстик текстик текстиктекстик текстик текстик текстик текстик
+                    текстик текстик текстик текстик текстик текстик
+                  </p>
+
+                  <p class="card__text-secondary">Дополнительный текстик, но менее важный</p>
+
+                  <p class="card__text-ost">Еще один доп текстик, так, по преколу</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <aside class="modal">
+      <form action="" class="modal__container">
+        <h2>Изменить клиента - Говно Говнарь Говнович</h2>
+
+        <div class="modal__content">
+          <label for="">
+            Имя
+
+            <input type="text" />
+          </label>
+
+          <label for="user">
+            Выберите клиента
+
+            <select name="user" id="">
+              <option value="1">Гейский Гей Геевич</option>
+              <option value="2">Питонский Питон Питоневич</option>
+              <option value="3">Пыхарский Пыхарь Пыхаревич</option>
+              <option value="9999">Фронтов Гигачад Ебейший</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="modal__buttons">
+          <button class="button-secondary cancel">Отменить</button>
+
+          <button class="button-primary save">Сохранить</button>
+        </div>
+      </form>
+    </aside>
 
     <aside class="overlay"></aside>
   </body>

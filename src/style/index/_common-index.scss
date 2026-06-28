@@ -28,6 +28,7 @@
       gap: $spacing-ml;
 
       .card {
+        position: relative;
         // padding: $spacing-s;
         // background-color: $base-background;
         // border-radius: 10px;
@@ -112,6 +113,19 @@
           font-weight: $weight-regular;
           line-height: 100%;
           color: $base-text-secondary;
+        }
+
+        &__tag {
+          position: absolute;
+          top: 180px;
+          left: 5px;
+          display: inline;
+          font-size: $fz-caption;
+          padding: $spacing-xs $spacing-ssm;
+          border-radius: 16px;
+          background-color: $primary-500;
+          color: $controls-text;
+          font-weight: $weight-medium;
         }
 
         // &:hover {
