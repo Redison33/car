@@ -28,11 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (index >= images.length) index = images.length - 1;
 
-      images.forEach((img) => img.classList.remove('active'));
-      images[index].classList.add('active');
+      images.forEach((img) => img ?? img.classList.remove('active'));
 
-      dots.forEach((d) => d.classList.remove('active'));
-      dots[index].classList.add('active');
+      if (images[index]) images[index].classList.add('active');
+
+      dots.forEach((d) => d ?? d.classList.remove('active'));
+
+      if (dots[index]) dots[index].classList.add('active');
     });
 
     slider.addEventListener('mouseleave', () => {
