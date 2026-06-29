@@ -109,3 +109,24 @@
     }
   }
 }
+
+.modal {
+  &__container {
+    .modal__content {
+      max-height: 50vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-sm;
+
+      label {
+        input,
+        select {
+          width: 100%;
+          max-width: 262px;
+          max-height: 46px;
+        }
+      }
+    }
+  }
+}

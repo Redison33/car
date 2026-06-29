@@ -154,3 +154,45 @@
     }
   }
 }
+
+.modal {
+  width: 500px;
+  &__container {
+    .modal__content {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-m;
+
+      .cars {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-s;
+
+        &__card {
+          border-radius: 10px;
+          padding: $spacing-sm;
+          background-color: $base-background;
+          display: flex;
+          gap: $spacing-l;
+
+          img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+          }
+
+          h3 {
+            font-size: $fz-h4;
+            font-weight: $weight-medium;
+          }
+        }
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+      }
+    }
+  }
+}

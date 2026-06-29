@@ -295,6 +295,20 @@ main {
   }
 }
 
+.search-block {
+  display: flex;
+  gap: $spacing-sm;
+
+  input {
+    width: 100%;
+  }
+
+  select {
+    max-width: 220px;
+    min-width: 220px;
+  }
+}
+
 .menu {
   min-width: 330px;
   max-width: 330px;

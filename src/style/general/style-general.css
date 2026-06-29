@@ -513,6 +513,18 @@ main {
   margin-top: auto;
 }
 
+.search-block {
+  display: flex;
+  gap: 12px;
+}
+.search-block input {
+  width: 100%;
+}
+.search-block select {
+  max-width: 220px;
+  min-width: 220px;
+}
+
 .menu {
   min-width: 330px;
   max-width: 330px;

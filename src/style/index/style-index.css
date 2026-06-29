@@ -122,6 +122,42 @@
   padding: 5px 10px;
 }
 
+.modal {
+  width: 500px;
+}
+.modal__container .modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modal__container .modal__content .cars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.modal__container .modal__content .cars__card {
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #f5f7fa;
+  display: flex;
+  gap: 24px;
+}
+.modal__container .modal__content .cars__card img {
+  width: 150px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal__container .modal__content .cars__card h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.modal__container .modal__content label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 @media (max-width: 1600px) {
   .catalog__container .catalog__content {
     grid-template-columns: repeat(4, 1fr);

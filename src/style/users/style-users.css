@@ -86,4 +86,18 @@
 }
 .users__container .table .tr {
   grid-template-columns: repeat(6, 1fr);
+}
+
+.modal__container .modal__content {
+  max-height: 50vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.modal__container .modal__content label input,
+.modal__container .modal__content label select {
+  width: 100%;
+  max-width: 262px;
+  max-height: 46px;
 }/*# sourceMappingURL=style-users.css.map */
